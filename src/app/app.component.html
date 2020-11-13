@@ -1,0 +1,104 @@
+
+<div class="controls">
+
+  <table>
+    <tr>
+      <td>
+        Částka 1
+      </td>
+      <td>
+        <input type="number" [(ngModel)]="amount1" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Start 1
+      </td>
+      <td>
+        <input [(ngModel)]="start1" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Úrok 1
+      </td>
+      <td>
+        <input type="number" [(ngModel)]="interest1" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Platba 1
+      </td>
+      <td>
+        <input type="number" [(ngModel)]="payment1" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Částka 2
+      </td>
+      <td>
+        <input type="number" [(ngModel)]="amount2" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Start 2
+      </td>
+      <td>
+        <input [(ngModel)]="start2" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Úrok 2
+      </td>
+      <td>
+        <input type="number" [(ngModel)]="interest2" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Platba 2
+      </td>
+      <td>
+        <input type="number" [(ngModel)]="payment2" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Počáteční odhadní cena
+      </td>
+      <td>
+        <input type="number" [(ngModel)]="propertyValue" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Tempo růstu ceny
+      </td>
+      <td>
+        <input type="number" [(ngModel)]="valueIncrease" />
+      </td>
+    </tr>
+
+  </table>
+
+</div>
+
+<div class="list-block">
+  <div *ngFor="let item of debt1.items" class="list-row">
+    <span class="no">{{item.no}}. </span>
+    <span class="value">{{item.amount}}</span>
+  </div>
+</div>
