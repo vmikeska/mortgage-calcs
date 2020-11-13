@@ -37,6 +37,27 @@ export class AppComponent implements OnInit {
 
 }
 
+export class CalculateValue {
+
+  public calc(monthsCount: number, percent: number, initialValue: number) {
+
+    let currentValue = initialValue;
+
+    let monthlyPercents = percent / 12;
+
+    for (let monthNo = 1; monthNo <= monthsCount; monthNo++) {
+
+      let monthlyRise = (currentValue / 100) * monthlyPercents;
+
+      currentValue += monthlyRise;
+  
+
+
+
+    }
+  }
+}
+
 //let startDate = moment().
 export class Calculate {
 
@@ -83,6 +104,11 @@ export interface MonthItem {
   amount: number;
   interestPayment: number;
   basePayment: number
+}
+
+export interface RiseItem {
+  no: number;
+  
 }
 
 
